@@ -5,6 +5,8 @@ import { RefreshTokenResponse } from './types'
 import { getNewAuth, setNewAuth } from './utils'
 import { CS_ACCESSTOKEN_APIS } from './constants'
 
+import eventsSync from './eventsSync'
+
 const destination: DestinationDefinition<Settings> = {
   name: 'Contentstack',
   slug: 'actions-contentstack',
@@ -57,7 +59,8 @@ const destination: DestinationDefinition<Settings> = {
     }
   },
   actions: {
-    customAttributesSync
+    customAttributesSync,
+    eventsSync
   }
 }
 
